@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div#test{ border:#000 1px solid; padding:10px 40px 40px 40px; }
+    </style>
+    <script type="text/javascript" src="js/questions.js"></script>
+    <script type="text/javascript" src="js/scores.js"></script>
+    <script type="text/javascript" src="js/testScript.js"></script>
+    <script type="text" id="tmp">
+
+        <div> a </div>
+    </script>
+</head>
+<body>
+<h2 id="test_status"></h2>
+<div id="test"></div>
+<script>
+    var test = new testScript();
+    test.renderQuestion();
+
+function loadXMLDoc()
+{
+var xmlhttp;
+if (window.XMLHttpRequest)
+{// code for IE7+, Firefox, Chrome, Opera, Safari
+xmlhttp=new XMLHttpRequest();
+}
+else
+{// code for IE6, IE5
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.onreadystatechange=function()
+{
+if (xmlhttp.readyState==4 && xmlhttp.status==200)
+{
+console.log(xmlhttp.responseText);
+}
+}
+xmlhttp.open("GET","server/api.php?all=true",true);
+xmlhttp.send();
+}
+
+    loadXMLDoc();
+    </script>
+</body>
+</html>
