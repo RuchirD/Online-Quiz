@@ -1,1 +1,1 @@
-$sql = "INSERT INTO `quiz`.`questions` (`id`, `query`) VALUES (NULL, \'What is the output of expression: 1 + \"hello\"?\');";
+$sql = "INSERT INTO `quiz`.`questions` (`id`, `ques`, `ans`, `correctans`) VALUES (NULL, \'What is the name of the tallest uninterrupted waterfall in the world?\', \'Niagara Falls;Angel Falls;Victoria Falls;Chelavara Falls\', \'1\'), (NULL, \'Which of the following capital cities is the most northerly?\', \'Dublin, Republic of Ireland;Ottawa, Canada;New Delhi, India;Tokyo, Japan\', \'0\');";

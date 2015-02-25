@@ -1,0 +1,38 @@
+.chart div {
+  font: 10px sans-serif;
+  background-color: blue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.graph-form {
+    border: 1px solid #5bc0de;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.help-block {
+
+    clear:both;
+}
+.page-break {
+    height: 50px;
+}
+
+.min-height {
+    height:50px;
+    border: 1px solid #5bc0de;
+}
+.w200{
+    width: 200px;
+    float:left;
+    margin-right:30px;
+}
+
+.list-group-item:hover {
+    background-color: #269abc;
+    color:#ffffff;
+}

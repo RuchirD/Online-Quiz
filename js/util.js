@@ -10,10 +10,12 @@ util.ajax = function (opt) {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            console.log(xmlhttp.responseText);
             opt.callback.apply(xmlhttp, [xmlhttp]);
         }
     }
     xmlhttp.open(opt.method ? opt.method : "GET", opt.url, true);
-    xmlhttp.send();
+    if (opt.contentType) {
+       xmlhttp.setRequestHeader("Content-type", opt.contentType);               //"application/json; charset=utf-8"
+    }
+    xmlhttp.send("content=" + opt.payLoad);
 };

@@ -1,8 +1,10 @@
-My skills:  
-<%if(this.showSkills) {%> 
-    <%for(var index in this.skills) {%>  
-    <a href="#"><%this.skills[index]%></a> 
-    <%}%> 
-<%} else {%> 
-    <p>none</p> 
+<h2>Question <%this.id%> of <%total%><h2>
+<h3><%this.ques%></h3>
+<form action="">
+    <%for(var x in this.ans) {%>
+    <input type="radio" name="quiz" value="<%this.ans[x]%>" data-ansId=<%x%> onClick="setAns(this)"><%this.ans[x]%><br>
 <%}%>
+</form>
+<input type="button" onclick="prev()" value="Prev">
+<input type="button" onclick="submit()" value="Submit">
+<input type="button" onclick="next()" value="Next">
